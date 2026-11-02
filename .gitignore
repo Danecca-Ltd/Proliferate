@@ -14,5 +14,6 @@ desktop.ini
 .idea/
 *.swp
 
-# Generated submission packages (rebuild from FusionBatchInsert.bundle/ + help.html)
+# Generated submission packages (rebuild from BatchInsert.bundle/ + help.html)
+BatchInsert_v*.zip
 FusionBatchInsert_v*.zip

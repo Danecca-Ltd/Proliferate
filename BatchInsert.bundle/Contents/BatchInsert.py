@@ -1,4 +1,4 @@
-"""FusionBatchInsert — place multiple jointed copies of a component in one step.
+"""BatchInsert — place multiple jointed copies of a component in one step.
 
 Adds "Batch Insert" to the Assemble panel in the Design workspace.
 """

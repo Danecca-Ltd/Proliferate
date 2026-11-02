@@ -29,7 +29,7 @@ import adsk.fusion
 # Constants
 # ---------------------------------------------------------------------------
 
-COMMAND_ID      = "FusionBatchInsert_Command"
+COMMAND_ID      = "BatchInsert_Command"
 COMMAND_NAME    = "Batch Insert"
 COMMAND_TOOLTIP = (
     "Select a jointed component, then place copies at matching joint origins. "
@@ -65,7 +65,7 @@ def _help_file() -> str:
 
 def _read_version() -> str:
     try:
-        manifest = os.path.join(os.path.dirname(__file__), "FusionBatchInsert.manifest")
+        manifest = os.path.join(os.path.dirname(__file__), "BatchInsert.manifest")
         with open(manifest, "r") as f:
             return json.load(f).get("version", "?")
     except Exception:

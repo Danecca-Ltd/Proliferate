@@ -1,5 +1,12 @@
 # Changelog
 
+## Unreleased
+- Renamed the add-in from FusionBatchInsert to BatchInsert (Autodesk App Store naming
+  policy: the product name "Fusion" may not appear in an add-in name). Renamed the bundle
+  folder, entry point (`BatchInsert.py`), manifest (`BatchInsert.manifest`), command id
+  (`BatchInsert_Command`), AppNameSpace (`com.danecca.batchinsert`), docs, and the GitHub
+  repository.
+
 ## 1.2.2 — 2026-09-17
 - Added in-app help: `Command.helpFile` now points at a bundled
   `Contents/resources/help/help.html`, so the command dialog shows a Help

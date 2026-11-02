@@ -1,4 +1,4 @@
-# FusionBatchInsert
+# BatchInsert
 
 A Fusion 360 add-in that places multiple jointed copies of a component across a hole pattern in a single operation.
 
@@ -32,7 +32,7 @@ Fusion's built-in **Duplicate with Joint** command creates one copy at a time. W
 2. Create a directory junction from the Fusion 360 add-ins folder to the bundle:
 
 ```powershell
-cmd /c mklink /J "%APPDATA%\Autodesk\ApplicationPlugins\FusionBatchInsert.bundle" "C:\path\to\FusionBatchInsert.bundle"
+cmd /c mklink /J "%APPDATA%\Autodesk\ApplicationPlugins\BatchInsert.bundle" "C:\path\to\BatchInsert.bundle"
 ```
 
 Replace `C:\path\to\` with the actual path to the cloned repository.
@@ -45,15 +45,15 @@ Replace `C:\path\to\` with the actual path to the cloned repository.
 2. Create a symbolic link:
 
 ```bash
-ln -s /path/to/FusionBatchInsert.bundle \
-  "$HOME/Library/Application Support/Autodesk/ApplicationPlugins/FusionBatchInsert.bundle"
+ln -s /path/to/BatchInsert.bundle \
+  "$HOME/Library/Application Support/Autodesk/ApplicationPlugins/BatchInsert.bundle"
 ```
 
 3. Restart Fusion 360.
 
 ### Verify the installation
 
-Go to **Utilities → Add-Ins**. FusionBatchInsert should appear in the list with version **1.2.2**.
+Go to **Utilities → Add-Ins**. BatchInsert should appear in the list with version **1.2.2**.
 
 ---
 
@@ -103,7 +103,7 @@ When **Select Similar** is active the add-in:
 Full history: [CHANGELOG.md](CHANGELOG.md).
 
 ### 1.2.2
-- Added in-app help: the command dialog now shows a Help button and responds to F1, opening a bundled help page (`FusionBatchInsert.bundle/Contents/resources/help/help.html`).
+- Added in-app help: the command dialog now shows a Help button and responds to F1, opening a bundled help page (`BatchInsert.bundle/Contents/resources/help/help.html`).
 
 ### 1.2.1
 - Toolbar button no longer auto-promotes itself to the top-level toolbar on install — that's left to the user (Marketplace publishing guideline).
