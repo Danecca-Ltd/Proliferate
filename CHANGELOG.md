@@ -1,5 +1,12 @@
 # Changelog
 
+## Unreleased
+- Renamed the add-in from BatchInsert to Proliferate. Renamed the bundle folder, entry
+  point (`Proliferate.py`), manifest (`Proliferate.manifest`), command module
+  (`proliferate.py`), icon folder (`resources/Proliferate/`), command id
+  (`Proliferate_Command`), AppNameSpace (`com.danecca.proliferate`), the toolbar button
+  label, docs, and the GitHub repository.
+
 ## 1.2.3 — 2026-11-13
 - New toolbar button icon (`resources/BatchInsert/{16x16,32x32,64x64}.png`), scaled from
   new artwork.

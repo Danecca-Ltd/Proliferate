@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>BatchInsert — Help</title>
+<title>Proliferate — Help</title>
 <style>
   body { font-family: -apple-system, Segoe UI, Arial, sans-serif; max-width: 760px; margin: 2rem auto; padding: 0 1.5rem; color: #1a1a1a; line-height: 1.55; }
   h1 { border-bottom: 3px solid #29558E; padding-bottom: 0.4rem; }
@@ -19,7 +19,7 @@
 </head>
 <body>
 
-<h1>BatchInsert <span class="version">v1.2.3</span></h1>
+<h1>Proliferate <span class="version">v1.2.3</span></h1>
 
 <p>A Fusion 360 add-in that places multiple jointed copies of a component across a hole pattern in a single operation.</p>
 
@@ -46,29 +46,29 @@
 <h3>Windows</h3>
 <ol>
   <li>Unzip this package to a permanent location on disk.</li>
-  <li>Copy (or link) the <code>BatchInsert.bundle</code> folder into:
+  <li>Copy (or link) the <code>Proliferate.bundle</code> folder into:
     <pre>%APPDATA%\Autodesk\ApplicationPlugins\</pre>
   </li>
-  <li>Restart Fusion. The <strong>Batch Insert</strong> button appears in the <strong>Assemble</strong> panel in the Design workspace.</li>
+  <li>Restart Fusion. The <strong>Proliferate</strong> button appears in the <strong>Assemble</strong> panel in the Design workspace.</li>
 </ol>
 
 <h3>macOS</h3>
 <ol>
   <li>Unzip this package to a permanent location on disk.</li>
-  <li>Copy the <code>BatchInsert.bundle</code> folder into:
+  <li>Copy the <code>Proliferate.bundle</code> folder into:
     <pre>~/Library/Application Support/Autodesk/ApplicationPlugins/</pre>
   </li>
   <li>Restart Fusion.</li>
 </ol>
 
 <h3>Verify the installation</h3>
-<p>Go to <strong>Utilities → Add-Ins</strong>. BatchInsert should appear in the list with version <strong>1.2.3</strong>.</p>
+<p>Go to <strong>Utilities → Add-Ins</strong>. Proliferate should appear in the list with version <strong>1.2.3</strong>.</p>
 
 <h2>Usage</h2>
 
 <h3>Manual mode (default)</h3>
 <ol>
-  <li>Click <strong>Batch Insert</strong> in the Assemble panel.</li>
+  <li>Click <strong>Proliferate</strong> in the Assemble panel.</li>
   <li>Pick the component that already has a joint (<em>Source component</em>).</li>
   <li>Pick each target joint origin, circular hole edge, or sketch point/circle individually into the <strong>Target locations</strong> list.</li>
   <li>Optionally adjust Flip / Preview.</li>
@@ -89,15 +89,15 @@
 <div class="tip">
   <strong>Tips</strong>
   <ul>
-    <li>The source component must already have at least one joint defined. Create a single joint manually first, then use Batch Insert for the rest.</li>
-    <li>If the assembly has existing joint compute errors (red/yellow markers in the timeline), fix those before running Batch Insert. Adding a new joint triggers a full recompute and will surface any pre-existing failures.</li>
+    <li>The source component must already have at least one joint defined. Create a single joint manually first, then use Proliferate for the rest.</li>
+    <li>If the assembly has existing joint compute errors (red/yellow markers in the timeline), fix those before running Proliferate. Adding a new joint triggers a full recompute and will surface any pre-existing failures.</li>
     <li>For assemblies with many hundreds of holes, skip the Preview checkbox and click OK directly. The yellow rings already show where copies will land.</li>
     <li>Editing the target list (removing a Select Similar match) is only available while <strong>Preview placement</strong> is unticked — that checkbox locks selection while it builds real instances.</li>
   </ul>
 </div>
 
 <footer>
-  <p>BatchInsert is a free add-in. It collects no user data.</p>
+  <p>Proliferate is a free add-in. It collects no user data.</p>
   <p>Danecca Ltd &mdash; 2026</p>
 </footer>
 

@@ -1,6 +1,6 @@
-"""BatchInsert — place multiple jointed copies of a component in one step.
+"""Proliferate — place multiple jointed copies of a component in one step.
 
-Adds "Batch Insert" to the Assemble panel in the Design workspace.
+Adds "Proliferate" to the Assemble panel in the Design workspace.
 """
 
 import adsk.core
@@ -13,7 +13,7 @@ _here = os.path.dirname(os.path.abspath(__file__))
 if _here not in sys.path:
     sys.path.insert(0, _here)
 
-import batch_insert  # noqa: E402
+import proliferate_cmd  # noqa: E402
 
 handlers: list = []
 
@@ -30,7 +30,7 @@ def run(context) -> None:
             ui.messageBox(
                 f"Workspace '{_WORKSPACE_ID}' not found.\n"
                 "Open a design and reload the add-in.",
-                "Batch Insert",
+                "Proliferate",
             )
             return
 
@@ -38,15 +38,15 @@ def run(context) -> None:
         if panel is None:
             ui.messageBox(
                 "Assemble panel not found in the toolbar.\n"
-                "Batch Insert could not be registered.",
-                "Batch Insert",
+                "Proliferate could not be registered.",
+                "Proliferate",
             )
             return
 
-        batch_insert.register(ui, panel, handlers)
+        proliferate_cmd.register(ui, panel, handlers)
 
     except Exception:
-        ui.messageBox(traceback.format_exc(), "Batch Insert — startup error")
+        ui.messageBox(traceback.format_exc(), "Proliferate — startup error")
 
 
 def stop(context) -> None:
@@ -56,7 +56,7 @@ def stop(context) -> None:
         workspace = ui.workspaces.itemById(_WORKSPACE_ID)
         panel = _find_panel(workspace, ui) if workspace else None
         if panel:
-            batch_insert.unregister(ui, panel)
+            proliferate_cmd.unregister(ui, panel)
     except Exception:
         pass
     finally:

@@ -1,4 +1,4 @@
-# BatchInsert
+# Proliferate
 
 A Fusion 360 add-in that places multiple jointed copies of a component across a hole pattern in a single operation.
 
@@ -32,12 +32,12 @@ Fusion's built-in **Duplicate with Joint** command creates one copy at a time. W
 2. Create a directory junction from the Fusion 360 add-ins folder to the bundle:
 
 ```powershell
-cmd /c mklink /J "%APPDATA%\Autodesk\ApplicationPlugins\BatchInsert.bundle" "C:\path\to\BatchInsert.bundle"
+cmd /c mklink /J "%APPDATA%\Autodesk\ApplicationPlugins\Proliferate.bundle" "C:\path\to\Proliferate.bundle"
 ```
 
 Replace `C:\path\to\` with the actual path to the cloned repository.
 
-3. Restart Fusion 360. The **Batch Insert** button appears in the **Assemble** drop-down panel in the Design workspace.
+3. Restart Fusion 360. The **Proliferate** button appears in the **Assemble** drop-down panel in the Design workspace.
 
 ### macOS
 
@@ -45,15 +45,15 @@ Replace `C:\path\to\` with the actual path to the cloned repository.
 2. Create a symbolic link:
 
 ```bash
-ln -s /path/to/BatchInsert.bundle \
-  "$HOME/Library/Application Support/Autodesk/ApplicationPlugins/BatchInsert.bundle"
+ln -s /path/to/Proliferate.bundle \
+  "$HOME/Library/Application Support/Autodesk/ApplicationPlugins/Proliferate.bundle"
 ```
 
 3. Restart Fusion 360.
 
 ### Verify the installation
 
-Go to **Utilities → Add-Ins**. BatchInsert should appear in the list with version **1.2.3**.
+Go to **Utilities → Add-Ins**. Proliferate should appear in the list with version **1.2.3**.
 
 ---
 
@@ -61,7 +61,7 @@ Go to **Utilities → Add-Ins**. BatchInsert should appear in the list with vers
 
 ### Manual mode (default)
 
-1. Click **Batch Insert** in the Assemble panel.
+1. Click **Proliferate** in the Assemble panel.
 2. Pick the component that already has a joint (*Source component*).
 3. Pick each target joint origin, circular hole edge, or sketch point/circle individually into the **Target locations** list.
 4. Optionally adjust Flip / Preview.
@@ -79,8 +79,8 @@ Go to **Utilities → Add-Ins**. BatchInsert should appear in the list with vers
 
 ### Tips
 
-- The source component must already have at least one joint defined. Create a single joint manually first, then use Batch Insert for the rest.
-- If the assembly has existing joint compute errors (red/yellow markers in the timeline), fix those before running Batch Insert. Adding a new joint triggers a full recompute and will surface any pre-existing failures.
+- The source component must already have at least one joint defined. Create a single joint manually first, then use Proliferate for the rest.
+- If the assembly has existing joint compute errors (red/yellow markers in the timeline), fix those before running Proliferate. Adding a new joint triggers a full recompute and will surface any pre-existing failures.
 - For assemblies with many hundreds of holes, skip the Preview checkbox and click OK directly. The yellow rings already show where copies will land.
 - Editing the target list (removing a Select Similar match) is only available while **Preview placement** is unticked — that checkbox locks selection while it builds real instances.
 

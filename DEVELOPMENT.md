@@ -1,15 +1,15 @@
-# Development Notes — BatchInsert
+# Development Notes — Proliferate
 
 ## Bundle structure
 
 ```
-BatchInsert.bundle/
+Proliferate.bundle/
   PackageContents.xml          — version shown in Utilities → Add-Ins; bump AppVersion + ComponentEntry Version
   Contents/
-    BatchInsert.manifest — JSON: version, runOnStartup, id
-    BatchInsert.py       — entry point: run() / stop()
-    batch_insert.py            — all command logic
-    resources/BatchInsert/     — 16x16, 32x32, 64x64 toolbar icons
+    Proliferate.manifest — JSON: version, runOnStartup, id
+    Proliferate.py       — entry point: run() / stop()
+    proliferate_cmd.py         — all command logic
+    resources/Proliferate/     — 16x16, 32x32, 64x64 toolbar icons
     resources/help/help.html   — in-app help page (Command.helpFile — F1 / Help button)
 ```
 
@@ -24,18 +24,18 @@ Fusion loads add-ins from `%APPDATA%\Autodesk\ApplicationPlugins\`. A directory 
 links that location to this repo so edits take effect after a reload (no copy step):
 
 ```powershell
-cmd /c mklink /J "%APPDATA%\Autodesk\ApplicationPlugins\BatchInsert.bundle" "C:\Fusion Gadgets\Batch Insert\BatchInsert.bundle"
+cmd /c mklink /J "%APPDATA%\Autodesk\ApplicationPlugins\Proliferate.bundle" "C:\Fusion Gadgets\Proliferate\Proliferate.bundle"
 ```
 
-Reload the add-in: Utilities → Add-Ins → select BatchInsert → Stop → Run.
+Reload the add-in: Utilities → Add-Ins → select Proliferate → Stop → Run.
 
 ## Handler lifecycle
 
 Fusion's garbage collector drops Python event handlers unless they are retained. Two lists
 keep handlers alive for the full session:
 
-- `handlers` (passed in from `BatchInsert.py`) — prevents GC during the session
-- `_retained` (module-level list in `batch_insert.py`) — second retention as safety net
+- `handlers` (passed in from `Proliferate.py`) — prevents GC during the session
+- `_retained` (module-level list in `proliferate_cmd.py`) — second retention as safety net
 
 Pattern: every handler is appended to both lists after being registered.
 

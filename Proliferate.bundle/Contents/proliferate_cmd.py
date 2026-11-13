@@ -1,4 +1,4 @@
-"""Batch Insert command.
+"""Proliferate command.
 
 Workflow:
   1. User picks a component that already has a joint ("Source component").
@@ -29,8 +29,8 @@ import adsk.fusion
 # Constants
 # ---------------------------------------------------------------------------
 
-COMMAND_ID      = "BatchInsert_Command"
-COMMAND_NAME    = "Batch Insert"
+COMMAND_ID      = "Proliferate_Command"
+COMMAND_NAME    = "Proliferate"
 COMMAND_TOOLTIP = (
     "Select a jointed component, then place copies at matching joint origins. "
     "Use 'Select similar' to auto-detect all matching holes, or pick targets manually."
@@ -56,7 +56,7 @@ _populating_targets = False
 
 
 def _res_folder() -> str:
-    return os.path.join(os.path.dirname(__file__), "resources", "BatchInsert")
+    return os.path.join(os.path.dirname(__file__), "resources", "Proliferate")
 
 
 def _help_file() -> str:
@@ -65,7 +65,7 @@ def _help_file() -> str:
 
 def _read_version() -> str:
     try:
-        manifest = os.path.join(os.path.dirname(__file__), "BatchInsert.manifest")
+        manifest = os.path.join(os.path.dirname(__file__), "Proliferate.manifest")
         with open(manifest, "r") as f:
             return json.load(f).get("version", "?")
     except Exception:
@@ -735,7 +735,7 @@ def _do_batch(args: adsk.core.CommandEventArgs, *, silent: bool = False) -> None
         args.isValidResult = (created > 0)
 
         if not silent:
-            msg = f"Batch Insert complete: {created} of {len(targets)} instance(s) placed."
+            msg = f"Proliferate complete: {created} of {len(targets)} instance(s) placed."
             if errors:
                 msg += "\n\nErrors:\n" + "\n".join(errors[:10])
                 if len(errors) > 10:
