@@ -4,7 +4,7 @@
     AutodeskProduct="Fusion360"
     Name="BatchInsert"
     Description="Batch-place jointed component instances across joint origins in one step"
-    AppVersion="1.2.2"
+    AppVersion="1.2.3"
     Author="Danecca Ltd"
     AppNameSpace="com.danecca.batchinsert"
     OnlineDocumentation=""
@@ -20,7 +20,7 @@
 
     <Components>
         <RuntimeRequirements SupportPath="./Contents" OS="win64|mac" Platform="Fusion360" SeriesMin="" />
-        <ComponentEntry AppName="BatchInsert" Version="1.2.2"
+        <ComponentEntry AppName="BatchInsert" Version="1.2.3"
             ModuleName="./Contents/BatchInsert.manifest"
             AppDescription="Batch-place jointed component instances across joint origins in one step" />
     </Components>

@@ -53,7 +53,7 @@ ln -s /path/to/BatchInsert.bundle \
 
 ### Verify the installation
 
-Go to **Utilities → Add-Ins**. BatchInsert should appear in the list with version **1.2.2**.
+Go to **Utilities → Add-Ins**. BatchInsert should appear in the list with version **1.2.3**.
 
 ---
 
@@ -101,6 +101,10 @@ When **Select Similar** is active the add-in:
 ## Changelog
 
 Full history: [CHANGELOG.md](CHANGELOG.md).
+
+### 1.2.3
+- New toolbar button icon.
+- Renamed the add-in from FusionBatchInsert to BatchInsert (Autodesk App Store naming policy).
 
 ### 1.2.2
 - Added in-app help: the command dialog now shows a Help button and responds to F1, opening a bundled help page (`BatchInsert.bundle/Contents/resources/help/help.html`).

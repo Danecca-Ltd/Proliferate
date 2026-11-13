@@ -1,6 +1,8 @@
 # Changelog
 
-## Unreleased
+## 1.2.3 — 2026-11-13
+- New toolbar button icon (`resources/BatchInsert/{16x16,32x32,64x64}.png`), scaled from
+  new artwork.
 - Renamed the add-in from FusionBatchInsert to BatchInsert (Autodesk App Store naming
   policy: the product name "Fusion" may not appear in an add-in name). Renamed the bundle
   folder, entry point (`BatchInsert.py`), manifest (`BatchInsert.manifest`), command id
